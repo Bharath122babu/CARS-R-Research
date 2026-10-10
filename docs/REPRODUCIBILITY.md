@@ -32,8 +32,9 @@ the exact epoch plan; it does not update model weights.
 `ci.yml` configures Windows/Linux CPU tests, with both the original operator
 and the opt-in faster adapter, plus repository-asset validation. GitHub jobs
 do not need private checkpoints or the training data cache.
-`docs.yml` checks the documentation on relevant changes. These are prepared
-workflow definitions, not proof of an already completed GitHub run.
+`docs.yml` checks the documentation on relevant changes. Both workflows run
+on the published repository; [Actions](https://github.com/Bharath122babu/CARS-R-Research/actions)
+shows the current results for each commit.
 
 Workflow setup follows the official
 [GitHub Python guide](https://docs.github.com/en/actions/tutorials/build-and-test-code/python)
@@ -42,10 +43,12 @@ and uses the tested Torch 2.6 CPU build listed in
 The GPU benchmark is tied to the local RTX 4070 Laptop setup; CPU CI does not
 establish GPU throughput.
 
-## Review before public posting
+## Published repository
 
 The folder has a local Git repository with source/config/docs/results tracked.
 Data, weights, run outputs, caches and build artifacts are excluded through
-`.gitignore`. No remote or fabricated repository URL is configured. Add the
-actual GitHub remote when the user chooses to publish. The optional weights
-and dataset can remain local or be published separately with their manifests.
+`.gitignore`. The public repository is
+[Bharath122babu/CARS-R-Research](https://github.com/Bharath122babu/CARS-R-Research),
+published on 10 October 2026. Optional weights and the prepared dataset remain
+local; a source-only clone regenerates the pinned dataset as described in the
+training guide.

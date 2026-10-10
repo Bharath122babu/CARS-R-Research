@@ -2,6 +2,8 @@
 
 # CARS-R · Research
 
+[![Model and runner checks](https://github.com/Bharath122babu/CARS-R-Research/actions/workflows/ci.yml/badge.svg)](https://github.com/Bharath122babu/CARS-R-Research/actions/workflows/ci.yml) [![Documentation and assets](https://github.com/Bharath122babu/CARS-R-Research/actions/workflows/docs.yml/badge.svg)](https://github.com/Bharath122babu/CARS-R-Research/actions/workflows/docs.yml)
+
 **A small hybrid language model that transforms recurrent history, reads it before writing, and corrects it with new evidence.**
 
 CARS-R combines three recurrent CARS blocks with one causal Multi-head Latent Attention (MLA) anchor. This repository contains the original mathematical reference, a qualified faster execution path, matched Transformer/KDA/GDN-2 baselines, and a complete one-epoch runner for laptop experiments.
@@ -136,7 +138,7 @@ The `lr8` and `state10` arms are unproven optional experiments. They were not tr
 - Original decay underflow in the submitted prototype was fixed; resume checks bind code/data/config/hardware before proceeding.
 - Export checks changed inputs/mask lengths and reloads the compiled CPU artifact. Its batch/context are fixed at **1 × 128**; it is not GPU training compilation.
 
-GitHub Actions definitions test CPU reference/fast behavior on Windows and Linux and check documentation assets. They are configured here; the repository has not yet been published or run on GitHub. See [reproducibility](docs/REPRODUCIBILITY.md) for what was checked locally.
+GitHub Actions test CPU reference/fast behavior on Windows and Linux and check documentation assets. The badges above link to the live workflow results. See [reproducibility](docs/REPRODUCIBILITY.md) for the local checks and hosted workflow scope.
 
 The standalone copy passed **74/74 local fast-enabled tests**, **67 CPU source-only tests with 7 CUDA skips**, and GPU numerical qualification. Documentation links, all six SVG/PNG pairs, local asset hashes and the 2,887-update epoch plan were checked. See the [build validation record](docs/BUILD_VALIDATION.md).
 

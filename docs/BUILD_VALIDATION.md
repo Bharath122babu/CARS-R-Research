@@ -1,7 +1,10 @@
 # Standalone build validation — 2026-10-10
 
 The prepared copy is independent of the existing project and experiment
-folders. It is an unpacked local Git repository; no GitHub remote is configured.
+folders. At preparation time it was an unpacked local Git repository without a
+remote. It was subsequently published as
+[Bharath122babu/CARS-R-Research](https://github.com/Bharath122babu/CARS-R-Research)
+on 10 October 2026; the checks below record the local preparation stage.
 No new full research training or epoch run was started while preparing it.
 
 | Check | Outcome |

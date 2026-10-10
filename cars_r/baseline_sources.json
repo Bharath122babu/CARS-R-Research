@@ -1,0 +1,26 @@
+{
+  "recipe_repository": "https://github.com/fla-org/flash-linear-attention",
+  "recipe_commit": "3e52d5abb6ad85312846f39c3e946c2e9881a823",
+  "recipe_license": "MIT; included in third_party_licenses/FLA_LICENSE.txt",
+  "kda_recipe": "fla/layers/kda.py",
+  "gdn2_recipe": "fla/layers/gdn2.py",
+  "reference_operators": [
+    "fla/ops/kda/naive.py",
+    "fla/ops/gdn2/naive.py"
+  ],
+  "gdn2_original_repository": "https://github.com/NVlabs/GatedDeltaNet-2",
+  "gdn2_original_commit": "a5552fe3c67e0ebc7ef1220df68ae8896ec62d56",
+  "backend": "portable sequential PyTorch, FP32 recurrence; no FLA/Triton runtime dependency",
+  "adaptations": [
+    "Common RMSNorm/SwiGLU backbone and 3:1 MLA schedule",
+    "Shared normal(0,0.02) linear initialization; upstream decay priors and bias initialization",
+    "Head/state dimensions scaled to laptop budget; FFN widths adjusted for parameter matching",
+    "FLA sigmoid output gate for both mixers; NVlabs original GDN-2 uses SiLU",
+    "One value head per query/key head; short convolution kernel4; negative eigenvalue gate disabled as in FLA defaults",
+    "Matrix recurrence and gates computed in FP32; source recipes use fused kernels"
+  ],
+  "compatible_completed_source_sha256": [
+    "9c5832917e5ead8f20cb16b316cf7c8d1d33d9bee501de8c673738c294484c88"
+  ],
+  "completed_model_compatibility": "Original 0.1.4 wheel/source hash verified; CUDA BF16 checkpoint logits match exactly for CARS and Transformer at prefix lengths 1,31,128."
+}

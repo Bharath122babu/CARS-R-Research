@@ -1,0 +1,10 @@
+* text=auto
+*.py text eol=lf
+*.svg text eol=lf
+*.png binary
+*.pt binary
+*.bin binary
+*.cmd text eol=crlf
+references/** -text
+pretrained/** -text
+reports/** -text

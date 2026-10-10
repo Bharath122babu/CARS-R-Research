@@ -1,0 +1,7 @@
+{"stage": "train_initial_resume_probe", "wall_seconds": 6.804315699992003, "exit_code": 0}
+{"stage": "train_resumed_full", "wall_seconds": 495.99446620000526, "exit_code": 0}
+{"stage": "evaluate_new_reference", "wall_seconds": 110.00253079997492, "exit_code": 0}
+{"stage": "evaluate_new_fast", "wall_seconds": 23.619076300004963, "exit_code": 0}
+{"stage": "evaluate_original_reference", "wall_seconds": 108.44190790000721, "exit_code": 0}
+{"stage": "export_reference", "wall_seconds": 20.9327485000249, "exit_code": 0}
+{"stage": "summary", "wall_seconds": 3.154018000001088, "exit_code": 0}

@@ -1,0 +1,44 @@
+{
+  "source": "Original expanded held-out comparison; rounded reported values",
+  "seed": 1337,
+  "wiki_windows": 1024,
+  "wiki_tokens": 131072,
+  "models": [
+    {
+      "model": "CARS-R original",
+      "wiki_nll": 1.54078,
+      "iid": 1.0,
+      "five_transfers": 1.0,
+      "two_objects": 0.0,
+      "unchanged": 0.0,
+      "minutes": 29.76
+    },
+    {
+      "model": "Transformer",
+      "wiki_nll": 1.52637,
+      "iid": 0.224,
+      "five_transfers": 0.156,
+      "two_objects": 0.137,
+      "unchanged": 0.145,
+      "minutes": 0.48
+    },
+    {
+      "model": "KDA hybrid",
+      "wiki_nll": 1.50294,
+      "iid": 0.98,
+      "five_transfers": 0.988,
+      "two_objects": 0.016,
+      "unchanged": 0.0,
+      "minutes": 7.98
+    },
+    {
+      "model": "GDN-2 hybrid",
+      "wiki_nll": 1.51235,
+      "iid": 0.998,
+      "five_transfers": 1.0,
+      "two_objects": 0.004,
+      "unchanged": 0.004,
+      "minutes": 7.83
+    }
+  ]
+}

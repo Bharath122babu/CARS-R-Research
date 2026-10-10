@@ -1,0 +1,61 @@
+{
+  "dataset": "Salesforce/wikitext",
+  "subset": "wikitext-2-raw-v1",
+  "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "source_card": "https://huggingface.co/datasets/Salesforce/wikitext/blob/b08601e04326c79dfdd32d625aee71d232d685c3/README.md",
+  "license": "See the preserved pinned DATASET_CARD.md; retain attribution for WikiText/Wikipedia data.",
+  "tokenizer": "UTF-8 bytes + BOS/EOS; physical line per document",
+  "sources": {
+    "train": {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/train-00000-of-00001.parquet?download=true",
+      "parquet_sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+      "official_rows": 36718,
+      "nonempty_rows": 23767
+    },
+    "validation": {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/validation-00000-of-00001.parquet?download=true",
+      "parquet_sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
+      "official_rows": 3760,
+      "nonempty_rows": 2461
+    },
+    "test": {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/test-00000-of-00001.parquet?download=true",
+      "parquet_sha256": "5f1bea067869d04849c0f975a2b29c4ff47d867f484f5010ea5e861eab246d91",
+      "official_rows": 4358,
+      "nonempty_rows": 2891
+    }
+  },
+  "synthetic": {
+    "generator": "ownership-transfer-v1",
+    "seed": 314159,
+    "splits": {
+      "train": {
+        "documents": 12000,
+        "sha256": "2e3dc3fab7fc29e47ef8fb198cb363a5f900648a5b2900cb9a12b7db1af4bdd7"
+      },
+      "validation": {
+        "documents": 500,
+        "sha256": "8778a477ac710dde0683066bd2c37ef5835e73b467e14fefb56e154553e9652a"
+      },
+      "test": {
+        "documents": 500,
+        "sha256": "66b5b25e174656bd39caa9b4e805eb6ee26cb1058d7f36042ebdd9f19d3ece28"
+      }
+    },
+    "max_training_transfer_steps": 3
+  },
+  "prepared_sha256": {
+    "train.bin": "715f9e485309b3af414d763454b9cd5781698bf770e315c31878a6eca41decba",
+    "train.bin.json": "a75a2e8a3737419c5d36c8f3a3df2a947e1d2c7adae9cd363bcd911d433a7785",
+    "validation.bin": "e8bc56fe7c95eb4d5a2592234f1a56171d413d50322ea90f29a47fa501fe59a8",
+    "validation.bin.json": "1574510f0d316f31186e0b9941767515b337886686de0331b637e738c57d4ef1",
+    "test.bin": "e0f1b1e1f6988bbe1e3f7a77e1469384f9eeb2e2dfc0a052cee99139dd3eeb53",
+    "test.bin.json": "4f2bc126311c91d34a4f3cf2c945f03900df40c2c6457442dcbbfc0cd4827f6c",
+    "wiki_test.bin": "e17e9af64606363c7ff471f488eb1f8b04cd301f2d15e606bbaa74c73cbaf4d2",
+    "wiki_test.bin.json": "c64b9885763a7613f9817346ef23c6eb63789e660aaa3ab8d20d8d01d2f26919",
+    "DATASET_CARD.md": "d5aabf145d341366745ac703b5844c442c143943b6c77929481395c822b1c28c",
+    "relations_test.jsonl": "66b5b25e174656bd39caa9b4e805eb6ee26cb1058d7f36042ebdd9f19d3ece28",
+    "relations_train.jsonl": "2e3dc3fab7fc29e47ef8fb198cb363a5f900648a5b2900cb9a12b7db1af4bdd7",
+    "relations_validation.jsonl": "8778a477ac710dde0683066bd2c37ef5835e73b467e14fefb56e154553e9652a"
+  }
+}

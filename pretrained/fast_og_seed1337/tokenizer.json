@@ -1,0 +1,7 @@
+{
+  "type": "utf8-bytes",
+  "vocab_size": 259,
+  "pad": 256,
+  "bos": 257,
+  "eos": 258
+}

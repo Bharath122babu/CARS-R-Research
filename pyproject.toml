@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cars-r-pgr"
+version = "0.1.5"
+description = "CARS-R research: recurrent relational memory, qualified faster execution, and matched baselines"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.4,<3", "numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+comparison = ["pyarrow>=14,<30"]
+docs = ["matplotlib>=3.7,<4", "pillow>=10"]
+
+[project.scripts]
+cars-train = "cars_r.train:main"
+cars-generate = "cars_r.generate:main"
+cars-prepare = "cars_r.data:main"
+cars-eval-state = "cars_r.eval_state_tracking:main"
+
+[tool.setuptools.packages.find]
+include = ["cars_r*"]
+
+[tool.setuptools.package-data]
+cars_r = ["baseline_sources.json", "third_party_licenses/*.txt"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

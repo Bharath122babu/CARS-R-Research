@@ -1,0 +1,26 @@
+[1/4] operator: fast path vs reference (outputs, final state, all gradients; masks with holes)
+   PASS fp64-cpu  random          rel err out 8.9e-16 state 7.0e-16 grad 2.1e-15
+   PASS fp64-cpu  collinear_keys  rel err out 2.4e-15 state 2.7e-15 grad 7.1e-15
+   PASS fp64-cpu  near_collinear_keys rel err out 1.2e-14 state 1.1e-14 grad 6.5e-13
+   PASS fp64-cpu  u_equals_w      rel err out 9.9e-16 state 6.2e-16 grad 3.2e-15
+   PASS fp64-cpu  zero_decay      rel err out 0.0e+00 state 2.3e-16 grad 8.4e-16
+   PASS fp32-cpu  random          rel err out 5.6e-07 state 3.3e-07 grad 1.6e-06
+   PASS fp32-cpu  collinear_keys  rel err out 1.3e-06 state 9.8e-07 grad 3.3e-06
+   PASS fp32-cpu  near_collinear_keys rel err out 5.3e-06 state 6.9e-06 grad 4.4e-04
+   PASS fp32-cpu  u_equals_w      rel err out 4.8e-07 state 2.1e-07 grad 1.0e-06
+   PASS fp32-cpu  zero_decay      rel err out 0.0e+00 state 1.2e-07 grad 2.2e-07
+   PASS fp32-cuda random          rel err out 3.6e-07 state 3.4e-07 grad 1.2e-06
+   PASS fp32-cuda collinear_keys  rel err out 1.3e-05 state 9.4e-06 grad 1.9e-05
+   PASS fp32-cuda near_collinear_keys rel err out 8.5e-06 state 1.1e-05 grad 4.0e-04
+   PASS fp32-cuda u_equals_w      rel err out 3.6e-07 state 3.5e-07 grad 1.8e-06
+   PASS fp32-cuda zero_decay      rel err out 0.0e+00 state 2.6e-07 grad 7.2e-07
+[2/4] full-model NLL: reference vs fast path
+   PASS 128 windows: reference 1.53213  fast 1.53215  |diff| 2.1e-05
+[3/4] full-model training step time, batch 32 x context 128 (same weights)
+   reference 3.537 s/step   peak 990 MiB
+   fast      0.864 s/step   peak 701 MiB
+   speedup 4.10x  -> about 14.4 min of step compute per 1,000 steps (excludes validation/checkpoints; check against the real run's metrics.jsonl)
+[4/4] host synchronisations inside one fast-path CARS layer forward+backward
+   2 synchronizing warnings (partial diagnostic, not an exhaustive count)
+
+QUALIFICATION PASS -> .\runs\fast\QUALIFICATION.json

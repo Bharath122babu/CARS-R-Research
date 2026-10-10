@@ -1,0 +1,96 @@
+{
+  "repo": "fla-org/flash-linear-attention",
+  "commit": "3e52d5abb6ad85312846f39c3e946c2e9881a823",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/LICENSE",
+      "sha256": "41a83c8187efc1e3ccc21909e806a9e52338e69448554d9754706c3d1cd610e7"
+    },
+    {
+      "path": "fla/layers/kda.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/layers/kda.py",
+      "sha256": "df262b935f0cefa3fbff1a21d213b9924836527b27d2031e5403963802910760"
+    },
+    {
+      "path": "fla/layers/gdn2.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/layers/gdn2.py",
+      "sha256": "5a28e2e5496dfb46bc64dde92040c95a5338b8d4927de4ed3a602e7325d460c8"
+    },
+    {
+      "path": "fla/ops/kda/naive.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/ops/kda/naive.py",
+      "sha256": "60a32285d4b67068ff633b48bbe8ab31028066d24f00d27e12199a88fc73f016"
+    },
+    {
+      "path": "fla/ops/kda/gate.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/ops/kda/gate.py",
+      "sha256": "7ea46d62149b8e28e0827e070fee327576de783cb981e3b855182f2b8198c16e"
+    },
+    {
+      "path": "fla/ops/gdn2/naive.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/ops/gdn2/naive.py",
+      "sha256": "6a65805401eb300df85b6297611a0dd158dd183423cf2bcd5e0f0ecdde3e9e7a"
+    },
+    {
+      "path": "fla/modules/convolution.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/modules/convolution.py",
+      "sha256": "2ab60fc508097457a2ad01dd1f6602ed7e1b47d8a2468949944402b7d5451b8a"
+    },
+    {
+      "path": "fla/modules/layernorm.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/modules/layernorm.py",
+      "sha256": "2ec239fab739c2d2733d00c4d233148fe3ed37262a447bbb5a3262683428a25c"
+    },
+    {
+      "path": "fla/models/kda/configuration_kda.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/models/kda/configuration_kda.py",
+      "sha256": "d0100155a9f9d4b7bdaba54c6c776de429561327ecc6f42c4e22a7defbf49c48"
+    },
+    {
+      "path": "benchmarks/modules/benchmark_l2norm.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/benchmarks/modules/benchmark_l2norm.py",
+      "sha256": "b49a0ea47dbf4321869d2c263fa93d20ee2c2ef497cacaa33c88fab1746ba1ec"
+    },
+    {
+      "path": "fla/modules/backends/triton_ascend/l2norm.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/modules/backends/triton_ascend/l2norm.py",
+      "sha256": "2456e73fd86235cd595f4b781c81bad04197fcab388b17a66eada55825289b2e"
+    },
+    {
+      "path": "fla/modules/conv/__init__.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/modules/conv/__init__.py",
+      "sha256": "599280e0e2561c43746e0d989768b676f7e44a9f4664a683eb969b63ca5229bc"
+    },
+    {
+      "path": "fla/modules/conv/cp/__init__.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/modules/conv/cp/__init__.py",
+      "sha256": "04a29f1234e3c32100c03bbae9abc216896a9e6aeff6a1c736fc637ce1e2ddf6"
+    },
+    {
+      "path": "fla/modules/conv/cuda/__init__.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/modules/conv/cuda/__init__.py",
+      "sha256": "ab7e4a775d884d8b47a7926d68085027afd808463de51596bde2a814f27f5425"
+    },
+    {
+      "path": "fla/modules/conv/short_conv.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/modules/conv/short_conv.py",
+      "sha256": "ef03ec92adc42ec35e476e20aed8bd5bc3a84250467e5ca761f51c9b702e0468"
+    },
+    {
+      "path": "fla/modules/conv/triton/__init__.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/modules/conv/triton/__init__.py",
+      "sha256": "7c32c6d8574febc8eaaac07135d2a27c02048e6bc6cd736b2e6ff10ccadf6ef8"
+    },
+    {
+      "path": "fla/modules/l2norm.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/fla/modules/l2norm.py",
+      "sha256": "24a20488800e5412501a579dcb712f43b70e08d3f5af3029847e71019ea2b033"
+    },
+    {
+      "path": "tests/modules/test_l2norm.py",
+      "url": "https://raw.githubusercontent.com/fla-org/flash-linear-attention/3e52d5abb6ad85312846f39c3e946c2e9881a823/tests/modules/test_l2norm.py",
+      "sha256": "ff22b0b27bda35e2a27a2b439ac09e076f14f8563241e365fcbf6a31336fad04"
+    }
+  ]
+}

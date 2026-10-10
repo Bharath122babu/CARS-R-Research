@@ -1,0 +1,199 @@
+{
+  "fast_path_file_sha256": "de7f8a38f244c67bce1d8d636e0d31392ca98cfca6c9f72dfa106f249a613f91",
+  "checks": [
+    {
+      "check": "operator fp64-cpu random",
+      "out": 8.919439618687323e-16,
+      "state": 7.024735527305698e-16,
+      "grad": 2.0500334058372126e-15,
+      "relative_limit": 1e-10,
+      "pass": true
+    },
+    {
+      "check": "operator fp64-cpu collinear_keys",
+      "out": 2.4259712354418824e-15,
+      "state": 2.7415205675105423e-15,
+      "grad": 7.067205467170721e-15,
+      "relative_limit": 2e-09,
+      "pass": true
+    },
+    {
+      "check": "operator fp64-cpu near_collinear_keys",
+      "out": 1.1805666259912386e-14,
+      "state": 1.0698658774333719e-14,
+      "grad": 6.45254970459227e-13,
+      "relative_limit": 2e-09,
+      "pass": true
+    },
+    {
+      "check": "operator fp64-cpu u_equals_w",
+      "out": 9.9410038738706e-16,
+      "state": 6.213621133350316e-16,
+      "grad": 3.2347207396245303e-15,
+      "relative_limit": 1e-10,
+      "pass": true
+    },
+    {
+      "check": "operator fp64-cpu zero_decay",
+      "out": 0.0,
+      "state": 2.286637611635253e-16,
+      "grad": 8.431665118570289e-16,
+      "relative_limit": 1e-10,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cpu random",
+      "out": 5.628141366287309e-07,
+      "state": 3.291715131581441e-07,
+      "grad": 1.5938178421492921e-06,
+      "relative_limit": 5e-05,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cpu collinear_keys",
+      "out": 1.3059014918326284e-06,
+      "state": 9.81153448265104e-07,
+      "grad": 3.2697300866857404e-06,
+      "relative_limit": 0.001,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cpu near_collinear_keys",
+      "out": 5.303996204020223e-06,
+      "state": 6.927071353857173e-06,
+      "grad": 0.00044002931099385023,
+      "relative_limit": 0.001,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cpu u_equals_w",
+      "out": 4.82458119677176e-07,
+      "state": 2.0998614047584852e-07,
+      "grad": 1.0428647101434763e-06,
+      "relative_limit": 5e-05,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cpu zero_decay",
+      "out": 0.0,
+      "state": 1.2479718236590998e-07,
+      "grad": 2.1721415066622285e-07,
+      "relative_limit": 5e-05,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cuda random",
+      "out": 3.571860531792481e-07,
+      "state": 3.3607005889280117e-07,
+      "grad": 1.181877451017499e-06,
+      "relative_limit": 5e-05,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cuda collinear_keys",
+      "out": 1.2871437320427503e-05,
+      "state": 9.414576197741553e-06,
+      "grad": 1.9303168301121332e-05,
+      "relative_limit": 0.001,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cuda near_collinear_keys",
+      "out": 8.54464087751694e-06,
+      "state": 1.0729341738624498e-05,
+      "grad": 0.00039734921301715076,
+      "relative_limit": 0.001,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cuda u_equals_w",
+      "out": 3.637524628175015e-07,
+      "state": 3.5087663263766444e-07,
+      "grad": 1.8394704284219188e-06,
+      "relative_limit": 5e-05,
+      "pass": true
+    },
+    {
+      "check": "operator fp32-cuda zero_decay",
+      "out": 0.0,
+      "state": 2.554637603680021e-07,
+      "grad": 7.198252092166513e-07,
+      "relative_limit": 5e-05,
+      "pass": true
+    },
+    {
+      "check": "trained CARS wiki NLL",
+      "reference": 1.5321295857429504,
+      "fast": 1.5321504175662994,
+      "abs_diff": 2.0831823348999023e-05,
+      "pass": true
+    }
+  ],
+  "torch": "2.6.0+cu124",
+  "timing": {
+    "device": "cuda",
+    "reference_s_per_step": 1.718338479998056,
+    "fast_s_per_step": 0.4408640000037849,
+    "speedup": 3.8976611380908937,
+    "projected_1000_step_minutes_fast": 7.347733333396415
+  },
+  "fast_path_syncs": 2,
+  "verdict": "PASS",
+  "execution_identity": {
+    "runner_sha256": "de7f8a38f244c67bce1d8d636e0d31392ca98cfca6c9f72dfa106f249a613f91",
+    "source": {
+      "__init__.py": "b0de8421bfd62d5d6d7040af4cf293e04a4e500aaf62b640bc000ecca68018d0",
+      "attention.py": "462568d8162e54539d3bc07f7cb07d8e750829b60eae0fbb2405331d982797c8",
+      "cars_operator.py": "46e9d17e9ffba6ed90631f2a9e9884d95f0157fc8a2808c75603cfda09dd8eb5",
+      "checkpoint.py": "ed95146edd05aec12b2359b1bffbc7b4de7a92b62abcca4a20f37714f8c293bf",
+      "compare.py": "09522f9e586c3eeea9a9fb6a348c86ba35eff314a2050ef99d0c574e61ecb5ad",
+      "comparison_data.py": "c7fc233ef17ed7eaf3f5e2b5262318d3b76ac307ad36a8884b33b5bd4b81dbd7",
+      "comparison_eval.py": "a9667bed569cd94794d5288b92157f56c9ae6d199a86e2cbb2a5299bedcc8950",
+      "config.py": "220ec8686a09c7b0d16866de25bf8e8fd8e7bf969cc870922c56733e19b7339e",
+      "data.py": "ea99494de2bde0e50431ff9017df014f3226d2b5d46a717939d33cb7fdff7ecb",
+      "delta_attention.py": "6bf81f79d9345daa058a7c4fe3d45c0c6b6951d3088fcc7e63936c30e666207e",
+      "diagnose.py": "2c7cf020afc623a47bba5d45f630ee2361ef6ec0243916d067d42d4fcf9a7a15",
+      "eval_memory_interference.py": "979a62289bad0853454a4b6be82526cd96d785918c584158d4a736e2aafe0ca1",
+      "eval_state_tracking.py": "4aa660a628f7751eda8ed3c1c92ada040dfceddaa28eabfbc33f52e7ef425b63",
+      "export_model.py": "38249743db207969cbeb099bcc76b08eeb6dbca11df6d9d88252f042c874bdd8",
+      "generate.py": "b3016acfcd0583136f91f21ae877f4c75f0aca970f55e2c138d400dbd97a329a",
+      "infer.py": "ea639b081daefb73542178751a9c40895777ebb2accbe768e7264eb38af138d8",
+      "layers.py": "449a2c54899ff32b1a735b26afb2f81a45e7825ed2b59c61d572373162ae3365",
+      "losses.py": "121e61204c4b7776b1e33b2d38f9961c8832c037b9505ff3d4e0544818710c04",
+      "model.py": "357b87a888ff1129af82ad70d7b3022e89eb5c52f91cd36e25ab9045c6a986f2",
+      "tokenizer.py": "b8c7014106c06c2f42c195eabb9b6e9461e93951a05915cf922c16baefe21422",
+      "train.py": "7967734f1d99fa2e20f8db2a0576020cb4418e3e50265ffd03d05d098efe0bf8"
+    },
+    "model_config_sha256": "1df3cef117af04d5e788892d1c5e722b96f96a29d5a4d0150b469169ad9e9faf",
+    "dataset": {
+      "DATASET_CARD.md": "d5aabf145d341366745ac703b5844c442c143943b6c77929481395c822b1c28c",
+      "manifest.json": "ed35e7977c92c2c5f2539f6d81b1a924b1e3dccab32928c8a49fd8d10afc74c6",
+      "relations_test.jsonl": "66b5b25e174656bd39caa9b4e805eb6ee26cb1058d7f36042ebdd9f19d3ece28",
+      "relations_test.txt": "6417cabee098592f9cd8daf5f16c9255242eb17f914180047e64457fb38f18f9",
+      "relations_train.jsonl": "2e3dc3fab7fc29e47ef8fb198cb363a5f900648a5b2900cb9a12b7db1af4bdd7",
+      "relations_train.txt": "8e42b76d94ce8a40c7fbb4606a6daa8a3898d3a8e5f2fadef1b72c5db8bb13f1",
+      "relations_validation.jsonl": "8778a477ac710dde0683066bd2c37ef5835e73b467e14fefb56e154553e9652a",
+      "relations_validation.txt": "a203f57214ec5c86908c4f142486a4e1c6a7544dc1e341fa463ad9ad3d275c16",
+      "test.bin": "e0f1b1e1f6988bbe1e3f7a77e1469384f9eeb2e2dfc0a052cee99139dd3eeb53",
+      "test.bin.json": "4f2bc126311c91d34a4f3cf2c945f03900df40c2c6457442dcbbfc0cd4827f6c",
+      "test.txt": "8b974fd176c17c01ab35e75a9994409d26ba699c5ed852540f941e4f81013196",
+      "train.bin": "715f9e485309b3af414d763454b9cd5781698bf770e315c31878a6eca41decba",
+      "train.bin.json": "a75a2e8a3737419c5d36c8f3a3df2a947e1d2c7adae9cd363bcd911d433a7785",
+      "train.txt": "6ddb79e44ffbe4591d57715367e3cbdf98e9c34916042435a4b907c2fa544d26",
+      "validation.bin": "e8bc56fe7c95eb4d5a2592234f1a56171d413d50322ea90f29a47fa501fe59a8",
+      "validation.bin.json": "1574510f0d316f31186e0b9941767515b337886686de0331b637e738c57d4ef1",
+      "validation.txt": "347858385ac28c65dd9ba9c9b3fe4538cab2a6869be3becfae4104d82284a2de",
+      "wiki_test.bin": "e17e9af64606363c7ff471f488eb1f8b04cd301f2d15e606bbaa74c73cbaf4d2",
+      "wiki_test.bin.json": "c64b9885763a7613f9817346ef23c6eb63789e660aaa3ab8d20d8d01d2f26919",
+      "wiki_test.txt": "bbf94c53a05abe9ee670d3b6343608095822c85e26de37c70b24fc571964574a",
+      "wiki_train.txt": "fc1dd2874bf42e945db9bd38e856ae18010f5c088e7446c706c5ba2f39310ee3",
+      "wiki_validation.txt": "8ef749789ca0693435d20b3f81d5638c19edcebc5a68586dcf09bdf47ef9542f"
+    },
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "matmul_precision": "highest",
+    "allow_tf32": false
+  }
+}

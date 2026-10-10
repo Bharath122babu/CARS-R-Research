@@ -1,0 +1,12 @@
+{
+  "architecture": "cars",
+  "source_step": 1000,
+  "weights": "model.pt",
+  "compiled": "compiled_cpu.pt",
+  "compiled_backend": "TorchScript CPU",
+  "compiled_batch_size": 1,
+  "compiled_context": 128,
+  "pad_and_mask_required": true,
+  "equivalence": "PASS on changed inputs and active lengths; saved artifact reloaded",
+  "note": "Fixed batch/context CPU compilation, not a fused CUDA recurrence or dynamic-shape serving cache."
+}

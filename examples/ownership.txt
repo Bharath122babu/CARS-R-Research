@@ -1,0 +1,2 @@
+A owns x. A gives x to B. B gives x to C. Owner of x: C
+D owns y. D gives y to E. Owner of y: E

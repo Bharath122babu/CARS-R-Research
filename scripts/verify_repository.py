@@ -10,6 +10,8 @@ errors = []
 markdown = [ROOT/'README.md', ROOT/'CONTRIBUTING.md', *sorted((ROOT/'docs').glob('*.md'))]
 for path in markdown:
     value = path.read_text(encoding='utf-8')
+    if r'\operatorname' in value:
+        errors.append(f'{path.relative_to(ROOT)}: unsupported math macro; use \\mathrm for function names')
     links = re.findall(r'!?\[[^\]]*\]\(([^)]+)\)', value)
     links += re.findall(r'(?:src|href)="([^"]+)"', value)
     for link in links:

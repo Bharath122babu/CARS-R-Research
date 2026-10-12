@@ -34,7 +34,7 @@ $$\Omega=\eta(uw^\top-wu^\top),\quad
 T=(I-\Omega/2)^{-1}(I+\Omega/2).$$
 
 For real skew $\Omega$, $T$ is orthogonal in exact arithmetic. State decays with
-$\delta=\exp(-\operatorname{softplus}(\mathrm{raw\ decay}))$. Heads start with
+$\delta=\exp(-\mathrm{softplus}(\mathrm{raw\ decay}))$. Heads start with
 log-spaced half-lives from 64 to 2048 tokens. Decay is static per learned head,
 not an input-dependent forget gate. The transport strength initialization is
 near identity.

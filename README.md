@@ -148,7 +148,7 @@ The input projection produces **225 quantities per head**, or **900 per position
 
 A bias-free linear layer produces
 
-$$[q_t,K_t,V_t,u_t,w_t,s_t]=\operatorname{split}(W_{\mathrm{in}}x_t).$$
+$$[q_t,K_t,V_t,u_t,w_t,s_t]=\mathrm{split}(W_{\mathrm{in}}x_t).$$
 
 The query, each key column, and both transport directions are L2-normalized with epsilon $10^{-6}$. Values remain unconstrained. Small systems and recurrent arithmetic use FP32 even under BF16 projection autocast.
 
@@ -172,11 +172,11 @@ Coincident directions give zero generator and identity transport. Strength proje
 
 Each head learns a positive decay rate:
 
-$$\delta_h=\exp[-\operatorname{softplus}(a_h)],\qquad\bar S_t=\delta_hS_{t-1}T_t.$$
+$$\delta_h=\exp[-\mathrm{softplus}(a_h)],\qquad\bar S_t=\delta_hS_{t-1}T_t.$$
 
 Its decay-only half-life is
 
-$$H_h=\frac{\log 2}{\operatorname{softplus}(a_h)}.$$
+$$H_h=\frac{\log 2}{\mathrm{softplus}(a_h)}.$$
 
 Heads start at different log-spaced half-lives between 64 and 2,048 positions. Decay is **static per learned head**, not an input-dependent forget gate. Transport and correction also change information, so a long decay half-life does not guarantee recall.
 
@@ -188,7 +188,7 @@ $$r_t=\bar S_tq_t.$$
 
 Default processing is
 
-$$\tilde r_t=\alpha_h\frac{r_t}{\sqrt{\operatorname{mean}(r_t^2)+10^{-6}}},\qquad\alpha_h=\operatorname{softplus}(c_h).$$
+$$\tilde r_t=\alpha_h\frac{r_t}{\sqrt{\mathrm{mean}(r_t^2)+10^{-6}}},\qquad\alpha_h=\mathrm{softplus}(c_h).$$
 
 Concatenate four reads and project from 128 coordinates to width 192. This normalizes the emitted feature, not the stored matrix. Read-before-write separates retrieval from current evidence commitment; its task benefit needs an after-write control.
 
@@ -204,7 +204,7 @@ Innovation is a learned-feature prediction error, not a factual verifier.
 
 The ridge stays positive:
 
-$$\lambda_h=\operatorname{softplus}(b_h)+0.001.$$
+$$\lambda_h=\mathrm{softplus}(b_h)+0.001.$$
 
 For rank-two evidence, form the 2 × 2 Gram system and update:
 
@@ -254,13 +254,13 @@ This is not a global nonlinear-network stability theorem. Values, projections, n
 
 The two pre-normalized residual updates are
 
-$$z=x+\operatorname{CARS}(\operatorname{RMSNorm}(x)),$$
+$$z=x+\mathrm{CARS}(\mathrm{RMSNorm}(x)),$$
 
-$$y=z+\operatorname{SwiGLU}(\operatorname{RMSNorm}(z)).$$
+$$y=z+\mathrm{SwiGLU}(\mathrm{RMSNorm}(z)).$$
 
 At zero dropout, SwiGLU computes
 
-$$\operatorname{SwiGLU}(z)=W_o[\operatorname{SiLU}(W_gz)\odot W_vz].$$
+$$\mathrm{SwiGLU}(z)=W_o[\mathrm{SiLU}(W_gz)\odot W_vz].$$
 
 The mixer carries sequence information; the FFN transforms features at each position. Both preserve width 192. Source: [`model.py`](cars_r/model.py), [`layers.py`](cars_r/layers.py).
 
@@ -275,9 +275,9 @@ The fourth block uses latent attention:
 
 For $j\leq t$, conceptual attention is
 
-$$a_{tj}=\operatorname{softmax}_{j\leq t}\left(\frac{q_{t,\mathrm{content}}^\top k_{j,\mathrm{content}}+q_{t,\mathrm{RoPE}}^\top k_{j,\mathrm{RoPE}}}{\sqrt{32}}\right),$$
+$$a_{tj}=\mathrm{softmax}_{j\leq t}\left(\frac{q_{t,\mathrm{content}}^\top k_{j,\mathrm{content}}+q_{t,\mathrm{RoPE}}^\top k_{j,\mathrm{RoPE}}}{\sqrt{32}}\right),$$
 
-$$o_t=W_o\operatorname{concat}_h\left(\sum_{j\leq t}a_{tj}^{(h)}v_j^{(h)}\right).$$
+$$o_t=W_o\mathrm{concat}_h\left(\sum_{j\leq t}a_{tj}^{(h)}v_j^{(h)}\right).$$
 
 [`attention.py`](cars_r/attention.py) calls PyTorch scaled dot-product attention. It is a research latent-KV implementation, not a vendor checkpoint/kernel reproduction.
 

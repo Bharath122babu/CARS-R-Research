@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1008pt" height="525.6pt" viewBox="0 0 1008 525.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-13T01:45:48.279017</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 525.6
+L 1008 525.6
+L 1008 0
+L 0 0
+z
+" style="fill: #081321"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 66.528 306.9504
+L 296.352 306.9504
+Q 316.512 306.9504 316.512 296.4384
+L 316.512 155.5776
+Q 316.512 145.0656 296.352 145.0656
+L 66.528 145.0656
+Q 46.368 145.0656 46.368 155.5776
+L 46.368 296.4384
+Q 46.368 306.9504 66.528 306.9504
+z
+" clip-path="url(#pc3ea5d09ba)" style="fill: #13253a; stroke: #38dbc2; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 429.408 222.8544
+L 608.832 222.8544
+Q 628.992 222.8544 628.992 212.3424
+L 628.992 139.8096
+Q 628.992 129.2976 608.832 129.2976
+L 429.408 129.2976
+Q 409.248 129.2976 409.248 139.8096
+L 409.248 212.3424
+Q 409.248 222.8544 429.408 222.8544
+z
+" clip-path="url(#pc3ea5d09ba)" style="fill: #13253a; stroke: #ffca70; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 741.888 222.8544
+L 941.472 222.8544
+Q 961.632 222.8544 961.632 212.3424
+L 961.632 139.8096
+Q 961.632 129.2976 941.472 129.2976
+L 741.888 129.2976
+Q 721.728 129.2976 721.728 139.8096
+L 721.728 212.3424
+Q 721.728 222.8544 741.888 222.8544
+z
+" clip-path="url(#pc3ea5d09ba)" style="fill: #13253a; stroke: #ffca70; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 314.482588 183.96
+Q 362.881802 183.96 409.492162 183.96
+" clip-path="url(#pc3ea5d09ba)" style="fill: none; stroke: #ffca70; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 403.092162 180.76
+L 409.492162 183.96
+L 403.092162 187.16
+z
+" clip-path="url(#pc3ea5d09ba)" style="fill: #ffca70; stroke: #ffca70; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 626.962588 183.96
+Q 675.361802 183.96 721.972162 183.96
+" clip-path="url(#pc3ea5d09ba)" style="fill: none; stroke: #ffca70; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 715.572162 180.76
+L 721.972162 183.96
+L 715.572162 187.16
+z
+" clip-path="url(#pc3ea5d09ba)" style="fill: #ffca70; stroke: #ffca70; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 429.408 370.0224
+L 608.832 370.0224
+Q 628.992 370.0224 628.992 359.5104
+L 628.992 286.9776
+Q 628.992 276.4656 608.832 276.4656
+L 429.408 276.4656
+Q 409.248 276.4656 409.248 286.9776
+L 409.248 359.5104
+Q 409.248 370.0224 429.408 370.0224
+z
+" clip-path="url(#pc3ea5d09ba)" style="fill: #13253a; stroke: #ae91ff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 741.888 370.0224
+L 941.472 370.0224
+Q 961.632 370.0224 961.632 359.5104
+L 961.632 286.9776
+Q 961.632 276.4656 941.472 276.4656
+L 741.888 276.4656
+Q 721.728 276.4656 721.728 286.9776
+L 721.728 359.5104
+Q 721.728 370.0224 741.888 370.0224
+z
+" clip-path="url(#pc3ea5d09ba)" style="fill: #13253a; stroke: #ae91ff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 411.400459 325.185968
+Q 362.88059 307.476215 316.041137 290.379815
+" clip-path="url(#pc3ea5d09ba)" style="fill: none; stroke: #ae91ff; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 320.95598 295.58023
+L 316.041137 290.379815
+L 323.150375 289.568189
+z
+" clip-path="url(#pc3ea5d09ba)" style="fill: #ae91ff; stroke: #ae91ff; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 834.861368 277.659342
+Q 575.866001 145.791208 315.888458 271.658763
+" clip-path="url(#pc3ea5d09ba)" style="fill: none; stroke: #ae91ff; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 323.043293 271.750078
+L 315.888458 271.658763
+L 320.254411 265.989684
+z
+" clip-path="url(#pc3ea5d09ba)" style="fill: #ae91ff; stroke: #ae91ff; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #edf6ff" x="50.4" y="43.048719" transform="rotate(-0 50.4 43.048719)">Memory geometry: learned features, not object slots</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9fb4ce" x="50.4" y="87.40725" transform="rotate(-0 50.4 87.40725)">One head / one sequence position. Four heads per layer; three independent CARS layers.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #38dbc2" x="181.44" y="206.495063" transform="rotate(-0 181.44 206.495063)">S: 32 x 32</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9fb4ce" x="181.44" y="263.456975" transform="rotate(-0 181.44 263.456975)">value coordinates x key coordinates</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffca70" x="519.12" y="166.812263" transform="rotate(-0 519.12 166.812263)">q: 32</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9fb4ce" x="519.12" y="198.492815" transform="rotate(-0 519.12 198.492815)">read query</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffca70" x="841.68" y="166.812263" transform="rotate(-0 841.68 166.812263)">r: 32</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9fb4ce" x="841.68" y="198.492815" transform="rotate(-0 841.68 198.492815)">Sbar @ q</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ae91ff" x="519.12" y="313.980262" transform="rotate(-0 519.12 313.980262)">K: 32 x 2</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9fb4ce" x="519.12" y="345.660815" transform="rotate(-0 519.12 345.660815)">two evidence directions</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ae91ff" x="841.68" y="313.980262" transform="rotate(-0 841.68 313.980262)">V: 32 x 2</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9fb4ce" x="841.68" y="345.660815" transform="rotate(-0 841.68 345.660815)">projected value targets</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9fb4ce" x="50.4" y="423.79125" transform="rotate(-0 50.4 423.79125)">Transport changes the key basis. Read retrieves history. Correction fits current key/value evidence.</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9fb4ce" x="50.4" y="476.075312" transform="rotate(-0 50.4 476.075312)">Each head stores 4 KiB FP32 state. All 12 CARS heads: 48 KiB / sequence; training uses more memory.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc3ea5d09ba">
+   <rect x="0" y="0" width="1008" height="525.6"/>
+  </clipPath>
+ </defs>
+</svg>

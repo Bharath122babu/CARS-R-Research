@@ -1,11 +1,48 @@
-# Historical findings and current execution speed
+# Completed epoch results and historical execution speed
+
+## Completed one-epoch comparison
+
+![Epoch results](assets/epoch_results.svg)
+
+All four models completed 2,887 updates over the same 11,824,794 real
+prediction targets, shuffled chunk order, AdamW schedule, validation selection,
+and test cases. Seed is 1337; the selected checkpoint was step 2,500 for every
+model. The complete epoch is a fresh training experiment, not continuation
+of the 1,000-step weights.
+
+| Model | Parameters | Wiki byte NLL ↓ | IID / fresh IID | Five transfers | Two objects | Unchanged | Training min |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| CARS-R fast | 2,044,068 | 1.38768 | 100% / 100% | 100% | 0% | 0% | 33.31 |
+| KDA hybrid | 2,037,228 | **1.36054** | 100% / 100% | 100% | 0% | 0% | 61.33 |
+| GDN-2 hybrid | 2,034,924 | 1.36967 | 100% / 100% | 100% | 0% | 0% | 42.70 |
+| Transformer | 2,042,112 | 1.38026 | 100% / 100% | 100% | 0% | 0% | **1.61** |
+
+All models copied the latest recipient on every example in both two-object
+stress suites. This supports the training-distribution shortcut diagnosis,
+not an ownership advantage for any model. Unrestricted space-and-owner
+generation agrees with the table. KDA has the lowest Wiki NLL in this run;
+the Transformer is fastest and has lower NLL than CARS.
+
+Training time counts logged synchronized steps, excluding validation,
+checkpoint saves, final evaluation and CPU export. The runs happened
+separately and step times varied with laptop conditions; these values are
+observations, not a controlled architecture-efficiency benchmark. KDA/GDN-2
+are portable adaptations rather than upstream optimized kernels. One seed
+does not establish a repeatable quality ranking.
+
+All models had zero skipped updates and passing CPU export checks.
+Public evidence is in [`../reports/epoch1_comparison.json`](../reports/epoch1_comparison.json):
+configuration, final/selected steps, checkpoint hashes, evaluation seed and
+window IDs, suite hash, peak allocation, and export reports. Personal paths
+and full checkpoint weights are omitted.
+
+## Historical 1,000-step evidence
 
 ![Speed](assets/speedup.svg)
 
-These are completed experiments from 2026-10-05, retained as evidence in the
-2026-10-10 standalone copy. Repackaging has not started another research run.
-The requested one-epoch experiment is prepared, with no completed epoch result
-claimed here. The superseded patch/workspace architecture is outside this repo.
+The following experiments were completed before the one-epoch comparison.
+They use a shorter random-window budget and should be compared within their
+own table. The superseded patch/workspace architecture is outside this repo.
 
 ## Original recipe and sample sizes
 

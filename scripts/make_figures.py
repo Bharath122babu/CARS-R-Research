@@ -33,17 +33,21 @@ def arrow(ax, a, b, color=MUTED, rad=0):
                                 color=color,connectionstyle=f'arc3,rad={rad}'))
 
 def save(fig, name):
-    for ext in ('svg','png'): fig.savefig(OUT/f'{name}.{ext}',dpi=150,facecolor=BG)
+    for ext in ('svg','png'):
+        path = OUT/f'{name}.{ext}'
+        fig.savefig(path,dpi=150,facecolor=BG)
+        if ext == 'svg':
+            path.write_bytes(('\n'.join(line.rstrip() for line in path.read_text(encoding='utf-8').splitlines())+'\n').encode('utf-8'))
     plt.close(fig)
 
 fig, ax = canvas(14,4.7)
 text(ax,5,83,'CARS-R',44,weight='bold')
-text(ax,5,64,'Recurrent relational memory + causal attention anchors',17,MUTED)
+text(ax,5,64,'Cayley transport + associative reads + ridge correction',17,MUTED)
 for x,title,sub,color in [(5,'2.04M','laptop model parameters',PURPLE),
-                         (36,'3.78x','measured training speedup',TEAL),
-                         (67,'100%','single-object ownership',GOLD)]:
+                         (36,'3.78x','vs original CARS execution',TEAL),
+                         (67,'Rank 2','block evidence correction',GOLD)]:
     card(ax,x,20,28,27,title,sub,color)
-text(ax,5,8,'Original state law. Qualified faster execution. One-seed research findings; two-object stress remains 0%.',10,MUTED)
+text(ax,5,8,'Completed epoch: Wiki NLL 1.38768. All four models reach 100% single-object / 0% two-object ownership.',10,MUTED)
 save(fig,'hero')
 
 fig, ax = canvas(14,7.5)
@@ -92,13 +96,13 @@ text(ax,5,5,'New full training wall time: 8.38 min including startup/validation/
 save(fig,'speedup')
 
 fig, ax = canvas(14,6.8)
-text(ax,5,93,'Ownership: strength and remaining weakness',24,weight='bold')
+text(ax,5,93,'Ownership: what the completed epoch actually tests',23,weight='bold')
 card(ax,5,38,42,38,'One object: 100%', 'A owns x. A -> B -> C. Query x: C',TEAL)
 card(ax,53,38,42,38,'Two-object stress: 0%', 'x -> B, then y -> E. Query x: B',RED)
 text(ax,26,54,'Original IID / fresh cases / five transfers',11,MUTED,ha='center')
 text(ax,74,54,'The last recipient is E, but x belongs to B',11,MUTED,ha='center')
 text(ax,5,24,'Candidate accuracy chooses among owners A-H. It is a synthetic task, not overall language accuracy.',12,MUTED)
-text(ax,5,13,'Fast execution preserved both the successful behavior and the failure pattern.',15,FG,weight='bold')
+text(ax,5,13,'CARS, KDA, GDN-2 and Transformer all show this shortcut after one epoch.',15,FG,weight='bold')
 save(fig,'ownership')
 
 fig, ax = canvas(14,5.2)
@@ -112,4 +116,39 @@ for a,b in [(24,28),(48,52),(72,76)]: arrow(ax,(a,56),(b,56))
 text(ax,5,26,'Resume restores optimizer/RNG state and reconstructs the remaining shuffled chunk order.',12,MUTED)
 text(ax,5,13,'One epoch = every one of the 11,824,794 next-token targets once; padded tail labels are ignored.',12,MUTED)
 save(fig,'workflow')
-print(f'Generated six original diagrams, each as PNG and editable SVG: {OUT}')
+fig, ax = canvas(14, 7.3)
+text(ax,5,93,'Memory geometry: learned features, not object slots',23,weight='bold')
+text(ax,5,84,'One head / one sequence position. Four heads per layer; three independent CARS layers.',12,MUTED)
+card(ax,5,42,26,30,'S: 32 x 32','value coordinates x key coordinates',TEAL)
+card(ax,41,58,21,17,'q: 32','read query',GOLD)
+card(ax,72,58,23,17,'r: 32','Sbar @ q',GOLD)
+arrow(ax,(31,65),(41,65),GOLD); arrow(ax,(62,65),(72,65),GOLD)
+card(ax,41,30,21,17,'K: 32 x 2','two evidence directions',PURPLE)
+card(ax,72,30,23,17,'V: 32 x 2','projected value targets',PURPLE)
+arrow(ax,(41,38),(31,45),PURPLE)
+arrow(ax,(83,47),(31,48),PURPLE,rad=.25)
+text(ax,5,20,'Transport changes the key basis. Read retrieves history. Correction fits current key/value evidence.',12,MUTED)
+text(ax,5,10,'Each head stores 4 KiB FP32 state. All 12 CARS heads: 48 KiB / sequence; training uses more memory.',11,MUTED)
+save(fig,'memory_geometry')
+
+epoch = json.loads((ROOT/'reports/epoch1_comparison.json').read_text(encoding='utf-8'))
+fig, ax = canvas(14, 6.6)
+text(ax,5,93,'Completed one-epoch comparison',26,weight='bold')
+text(ax,5,84,'2,887 updates / 11,824,794 real targets each / seed 1337 / approximately matched parameters',12,MUTED)
+headers = [(5,'Model'), (30,'Wiki NLL'), (49,'IID / 5 transfers'), (72,'Two objects'), (92,'Minutes')]
+for x,label in headers:
+    text(ax,x,71,label,12,ha='left' if x == 5 else 'center',weight='bold')
+ax.plot([5,96],[65,65],color=MUTED,lw=.7)
+labels = {'cars':'CARS-R fast','kda':'KDA hybrid','gdn2':'GDN-2 hybrid','transformer':'Transformer'}
+for i,row in enumerate(epoch['models']):
+    y = 56-i*11
+    color = TEAL if row['model']=='cars' else FG
+    text(ax,5,y,labels[row['model']],13,color,weight='bold')
+    text(ax,30,y,f"{row['wiki_nll']:.5f}",14,color,ha='center')
+    text(ax,49,y,f"{row['iid']:.0%} / {row['five_transfers']:.0%}",13,color,ha='center')
+    text(ax,72,y,f"{row['two_objects']:.0%}",13,RED,ha='center')
+    text(ax,92,y,f"{row['training_minutes']:.2f}",13,color,ha='center')
+text(ax,5,12,'Lower Wiki byte NLL is better. Fresh IID is 100% and unchanged-object accuracy is 0% for every model.',10,MUTED)
+text(ax,5,5,'Times cover logged training steps; evaluation/export excluded. GPU load varied; these are local portable baselines.',10,MUTED)
+save(fig,'epoch_results')
+print(f'Generated eight original diagrams, each as PNG and editable SVG: {OUT}')

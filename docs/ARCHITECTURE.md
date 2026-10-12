@@ -119,5 +119,10 @@ this is not a global bounded-activation/gradient guarantee.
 Historical health probes were finite; state norms were approximately 7–10
 per head, with differentiated half-lives near 52/166/530/1670 tokens.
 The speed run preserved single-object ownership and the two-object failure.
-The state law is interesting, but object-specific tracking remains an empirical
-research problem. See [RESULTS.md](RESULTS.md).
+In the completed epoch, CARS head half-lives near step 2,800 were approximately
+37/117/374/1176 positions, with variation across layers. These are decay-only
+timescales, not measured recall horizons.
+The matched epoch gave CARS Wiki NLL 1.38768. All four models reached 100%
+single-object accuracy and 0% on both two-object stress suites, following the
+latest recipient. Object-conditioned tracking remains an empirical research
+problem. See [RESULTS.md](RESULTS.md).

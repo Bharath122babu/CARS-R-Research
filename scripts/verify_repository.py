@@ -18,9 +18,13 @@ for path in markdown:
         if not destination.exists(): errors.append(f'{path.relative_to(ROOT)}: missing {link}')
     if re.search(r'[A-Z]:[\\/]|/Users/|/home/', value):
         errors.append(f'{path.relative_to(ROOT)}: personal absolute path')
-for name in ('hero','architecture','operator','speedup','ownership','workflow'):
-    ET.parse(ROOT/f'docs/assets/{name}.svg')
-    if not (ROOT/f'docs/assets/{name}.png').exists(): errors.append(f'Missing PNG: {name}')
+diagrams = sorted((ROOT/'docs/assets').glob('*.svg'))
+for diagram in diagrams:
+    ET.parse(diagram)
+    if not diagram.with_suffix('.png').exists(): errors.append(f'Missing PNG: {diagram.stem}')
+required = {'hero','architecture','operator','speedup','ownership','workflow','memory_geometry','epoch_results'}
+missing_diagrams = required - {diagram.stem for diagram in diagrams}
+if missing_diagrams: errors.append(f'Missing required diagrams: {sorted(missing_diagrams)}')
 for name in ('cars_fast.py','cars_epoch.py'):
     source = (ROOT/name).read_text(encoding='utf-8')
     compile(source, name, 'exec')
@@ -35,5 +39,5 @@ for relative, digest in assets.items():
         errors.append(f'Asset hash changed: {relative}')
     checked += 1
 if errors: raise SystemExit('\n'.join(errors))
-print(json.dumps({'status':'PASS','markdown_documents':len(markdown), 'diagram_pairs':6,
+print(json.dumps({'status':'PASS','markdown_documents':len(markdown), 'diagram_pairs':len(diagrams),
                   'local_assets_verified':checked, 'optional_local_assets_absent':missing},indent=2))

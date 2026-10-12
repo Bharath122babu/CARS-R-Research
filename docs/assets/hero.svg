@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-10T13:49:24.721370</dc:date>
+    <dc:date>2026-10-13T01:45:47.855272</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,58 +21,58 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 338.4 
-L 1008 338.4 
-L 1008 0 
-L 0 0 
+   <path d="M 0 338.4
+L 1008 338.4
+L 1008 0
+L 0 0
 z
 " style="fill: #081321"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 66.528 272.0736 
-L 316.512 272.0736 
-Q 336.672 272.0736 336.672 265.3056 
-L 336.672 184.7664 
-Q 336.672 177.9984 316.512 177.9984 
-L 66.528 177.9984 
-Q 46.368 177.9984 46.368 184.7664 
-L 46.368 265.3056 
-Q 46.368 272.0736 66.528 272.0736 
+    <path d="M 66.528 272.0736
+L 316.512 272.0736
+Q 336.672 272.0736 336.672 265.3056
+L 336.672 184.7664
+Q 336.672 177.9984 316.512 177.9984
+L 66.528 177.9984
+Q 46.368 177.9984 46.368 184.7664
+L 46.368 265.3056
+Q 46.368 272.0736 66.528 272.0736
 z
-" clip-path="url(#pada284e494)" style="fill: #13253a; stroke: #ae91ff; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p9f53aa2101)" style="fill: #13253a; stroke: #ae91ff; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 379.008 272.0736 
-L 628.992 272.0736 
-Q 649.152 272.0736 649.152 265.3056 
-L 649.152 184.7664 
-Q 649.152 177.9984 628.992 177.9984 
-L 379.008 177.9984 
-Q 358.848 177.9984 358.848 184.7664 
-L 358.848 265.3056 
-Q 358.848 272.0736 379.008 272.0736 
+    <path d="M 379.008 272.0736
+L 628.992 272.0736
+Q 649.152 272.0736 649.152 265.3056
+L 649.152 184.7664
+Q 649.152 177.9984 628.992 177.9984
+L 379.008 177.9984
+Q 358.848 177.9984 358.848 184.7664
+L 358.848 265.3056
+Q 358.848 272.0736 379.008 272.0736
 z
-" clip-path="url(#pada284e494)" style="fill: #13253a; stroke: #38dbc2; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p9f53aa2101)" style="fill: #13253a; stroke: #38dbc2; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 691.488 272.0736 
-L 941.472 272.0736 
-Q 961.632 272.0736 961.632 265.3056 
-L 961.632 184.7664 
-Q 961.632 177.9984 941.472 177.9984 
-L 691.488 177.9984 
-Q 671.328 177.9984 671.328 184.7664 
-L 671.328 265.3056 
-Q 671.328 272.0736 691.488 272.0736 
+    <path d="M 691.488 272.0736
+L 941.472 272.0736
+Q 961.632 272.0736 961.632 265.3056
+L 961.632 184.7664
+Q 961.632 177.9984 941.472 177.9984
+L 691.488 177.9984
+Q 671.328 177.9984 671.328 184.7664
+L 671.328 265.3056
+Q 671.328 272.0736 691.488 272.0736
 z
-" clip-path="url(#pada284e494)" style="fill: #13253a; stroke: #ffca70; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p9f53aa2101)" style="fill: #13253a; stroke: #ffca70; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <text style="font-weight: 700; font-size: 44px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #edf6ff" x="50.4" y="69.66925" transform="rotate(-0 50.4 69.66925)">CARS-R</text>
    </g>
    <g id="text_2">
-    <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9fb4ce" x="50.4" y="126.514938" transform="rotate(-0 50.4 126.514938)">Recurrent relational memory + causal attention anchors</text>
+    <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9fb4ce" x="50.4" y="126.514938" transform="rotate(-0 50.4 126.514938)">Cayley transport + associative reads + ridge correction</text>
    </g>
    <g id="text_3">
     <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ae91ff" x="191.52" y="215.469863" transform="rotate(-0 191.52 215.469863)">2.04M</text>
@@ -84,21 +84,21 @@ z
     <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #38dbc2" x="504" y="215.469863" transform="rotate(-0 504 215.469863)">3.78x</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9fb4ce" x="504" y="247.896335" transform="rotate(-0 504 247.896335)">measured training speedup</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9fb4ce" x="504" y="247.896335" transform="rotate(-0 504 247.896335)">vs original CARS execution</text>
    </g>
    <g id="text_7">
-    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffca70" x="816.48" y="215.469863" transform="rotate(-0 816.48 215.469863)">100%</text>
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffca70" x="816.48" y="215.469863" transform="rotate(-0 816.48 215.469863)">Rank 2</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9fb4ce" x="816.48" y="247.896335" transform="rotate(-0 816.48 247.896335)">single-object ownership</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9fb4ce" x="816.48" y="247.896335" transform="rotate(-0 816.48 247.896335)">block evidence correction</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9fb4ce" x="50.4" y="314.087375" transform="rotate(-0 50.4 314.087375)">Original state law. Qualified faster execution. One-seed research findings; two-object stress remains 0%.</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9fb4ce" x="50.4" y="314.087375" transform="rotate(-0 50.4 314.087375)">Completed epoch: Wiki NLL 1.38768. All four models reach 100% single-object / 0% two-object ownership.</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pada284e494">
+  <clipPath id="p9f53aa2101">
    <rect x="0" y="0" width="1008" height="338.4"/>
   </clipPath>
  </defs>

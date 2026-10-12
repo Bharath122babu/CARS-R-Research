@@ -40,6 +40,27 @@ At completion the command evaluates 1,024 held-out Wiki windows, original
 ownership IID, 2,000 unseen ownership cases, five-transfer cases and both
 two-object stress suites. It exports `best.pt` using the original model code.
 
+## Matching one-epoch baselines
+
+After completing the CARS epoch in this checkout, run:
+
+```cmd
+python -u baselines_epoch.py --epochs 1 --cars-run runs/fast/epoch1_seed1337
+```
+
+KDA, GDN-2 and Transformer train sequentially from fresh initialization, with
+the same shuffled chunks, ignored-padding loss, optimizer and validation
+rule. Each model saves its own resumable checkpoint. The same command resumes
+interrupted runs and evaluates/exports completed models. It writes
+`runs/fast/epoch_comparison_seed1337.md`, JSON and CSV summaries.
+
+The runner verifies the reference epoch's data, core source, schedule, token
+count and sampler. For a fresh clone, pass `--cars-run` explicitly. The
+default supports the original local workspace's external experiment copy;
+the repository does not distribute that checkpoint or its directory.
+
+The completed matched experiment is reported in [RESULTS.md](RESULTS.md).
+
 ## Logs and artifacts
 
 ```text

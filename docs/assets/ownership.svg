@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-10T13:49:25.005125</dc:date>
+    <dc:date>2026-10-13T01:45:48.158644</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,42 +21,42 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 489.6 
-L 1008 489.6 
-L 1008 0 
-L 0 0 
+   <path d="M 0 489.6
+L 1008 489.6
+L 1008 0
+L 0 0
 z
 " style="fill: #081321"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 66.528 305.5104 
-L 457.632 305.5104 
-Q 477.792 305.5104 477.792 295.7184 
-L 477.792 125.3376 
-Q 477.792 115.5456 457.632 115.5456 
-L 66.528 115.5456 
-Q 46.368 115.5456 46.368 125.3376 
-L 46.368 295.7184 
-Q 46.368 305.5104 66.528 305.5104 
+    <path d="M 66.528 305.5104
+L 457.632 305.5104
+Q 477.792 305.5104 477.792 295.7184
+L 477.792 125.3376
+Q 477.792 115.5456 457.632 115.5456
+L 66.528 115.5456
+Q 46.368 115.5456 46.368 125.3376
+L 46.368 295.7184
+Q 46.368 305.5104 66.528 305.5104
 z
-" clip-path="url(#pe1d23da513)" style="fill: #13253a; stroke: #38dbc2; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p8ba455f353)" style="fill: #13253a; stroke: #38dbc2; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 550.368 305.5104 
-L 941.472 305.5104 
-Q 961.632 305.5104 961.632 295.7184 
-L 961.632 125.3376 
-Q 961.632 115.5456 941.472 115.5456 
-L 550.368 115.5456 
-Q 530.208 115.5456 530.208 125.3376 
-L 530.208 295.7184 
-Q 530.208 305.5104 550.368 305.5104 
+    <path d="M 550.368 305.5104
+L 941.472 305.5104
+Q 961.632 305.5104 961.632 295.7184
+L 961.632 125.3376
+Q 961.632 115.5456 941.472 115.5456
+L 550.368 115.5456
+Q 530.208 115.5456 530.208 125.3376
+L 530.208 295.7184
+Q 530.208 305.5104 550.368 305.5104
 z
-" clip-path="url(#pe1d23da513)" style="fill: #13253a; stroke: #ff879a; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p8ba455f353)" style="fill: #13253a; stroke: #ff879a; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 700; font-size: 24px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #edf6ff" x="50.4" y="40.80075" transform="rotate(-0 50.4 40.80075)">Ownership: strength and remaining weakness</text>
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #edf6ff" x="50.4" y="40.528719" transform="rotate(-0 50.4 40.528719)">Ownership: what the completed epoch actually tests</text>
    </g>
    <g id="text_2">
     <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #38dbc2" x="262.08" y="186.701269" transform="rotate(-0 262.08 186.701269)">One object: 100%</text>
@@ -80,12 +80,12 @@ z
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9fb4ce" x="50.4" y="375.40725" transform="rotate(-0 50.4 375.40725)">Candidate accuracy chooses among owners A-H. It is a synthetic task, not overall language accuracy.</text>
    </g>
    <g id="text_9">
-    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #edf6ff" x="50.4" y="430.091062" transform="rotate(-0 50.4 430.091062)">Fast execution preserved both the successful behavior and the failure pattern.</text>
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #edf6ff" x="50.4" y="430.091062" transform="rotate(-0 50.4 430.091062)">CARS, KDA, GDN-2 and Transformer all show this shortcut after one epoch.</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pe1d23da513">
+  <clipPath id="p8ba455f353">
    <rect x="0" y="0" width="1008" height="489.6"/>
   </clipPath>
  </defs>

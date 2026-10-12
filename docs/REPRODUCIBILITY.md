@@ -1,6 +1,9 @@
 # Reproducibility and workflows
 
-The measured results predate the standalone cleanup. Model package source
+The historical 1,000-step results predate the standalone cleanup; a completed
+matched epoch comparison is now included in [RESULTS.md](RESULTS.md) and
+[`../reports/epoch1_comparison.json`](../reports/epoch1_comparison.json).
+Model package source
 `cars_r/*.py` is preserved byte-for-byte from OG v0.1.5, source SHA-256
 `1c6eb29e6e3dd84a4e1d2f30ec560d04ced855084237dab9526239df36ab1914`.
 Only standalone runners, metadata, examples, documentation and workflows were
